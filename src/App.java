@@ -39,15 +39,7 @@
     }
 
 3. Escreva um código que o usuário entre com um primeiro número, um segundo número maior que o primeiro e escolhe entre a opção par e impar, com isso o código deve informar todos os números pares ou ímpares (de acordo com a seleção inicial) no intervalo de números informados, incluindo os números informados e em ordem decrescente;
-
-4Escreva um código onde o usuário informa um número inicial, posteriormente irá informar outros N números, a execução do código irá continuar até que o número informado dividido pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro número devem ser ignorados
- */
-
-import java.util.Scanner;
-
-public class App {
-    public static void main(String[] args) throws Exception {
-        Scanner scanner = new Scanner(System.in);
+Scanner scanner = new Scanner(System.in);
         int menorNumero = 0;
         int maiorNumero = 0;
         String escolha = "";
@@ -93,6 +85,37 @@ public class App {
                 }
             }
         }
-        
+
+4. Escreva um código onde o usuário informa um número inicial, posteriormente irá informar outros N números, a execução do código irá continuar até que o número informado dividido pelo primeiro número tenha resto diferente de 0 na divisão, números menores que o primeiro número devem ser ignorados
+        Scanner scanner = new Scanner(System.in);
+        int numero = 0;
+
+        System.out.println("Informe um numero base:");
+        var base = scanner.nextDouble();
+
+        do {
+            System.out.println("Informe um numero maior que a base:");
+            numero = scanner.nextInt();            
+
+            System.out.println(numero % base);
+
+            if (numero % base == 0) {
+                System.out.println("Numero divisiavel de zero!");
+                break;
+            } else {
+                if (numero < base) {
+                    System.out.println("Numero menor que a base :(");
+                } else if (numero % base != 0) {
+                    System.out.println("Resto da divisao nao e 0 :(");
+                }
+            }
+        } while (true);
+ */
+
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        // Fazer uma lista para ecolher qual codigo rodar
     }
 }
