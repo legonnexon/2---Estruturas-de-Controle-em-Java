@@ -2,28 +2,38 @@ import java.util.Scanner;
 
 public class Atividades {
     public void primeiraAtividade() {
-            Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Informe um numero de 1 - 10:");
+        System.out.println("Bem vindo a MEGAAAA Tabuada Suprema!");
+        System.out.println("A onde temos as melhores do mundo!");
+        System.out.print("Comece informando um numero de 1 a 10: ");
         var numero = scanner.nextInt();
         
         System.out.println("=======Mega Tabuada 2000======");
         for (int i = 0; i < 10; i++) {
             System.out.printf("%s x %s : %s\n", numero, (i+1), numero*(i+1));
         }
+        System.out.println("==============================");
     }
 
     public void segundaAtividade() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Informe sua altura:");
+        System.out.println("Seeeejaa bem vindo! Ao programa IMC SUPREMO 5000!");
+        System.out.println("Avaliaremos seu peso e altura para descobrir seu I. C. M!");
+        System.out.print("Comece informando sua altura em metros (ex: 1,70): ");
         var altura = scanner.nextFloat();
 
-        System.out.print("Informe seu peso:");
+        System.out.printf("\nEntao voce tem %s de altura, legal!\n", altura);
+        System.out.print("Se poder informe seu peso: ");
         var peso = scanner.nextFloat();
 
+        System.out.println("\nPelas informacoes recebidas. Irei. avaliar seu ICM!");
+        System.out.println("IMC sendo Indice de Massa Corporal!");
         var IMC = peso/(altura * altura);
-
+        
+        System.out.println("Depois de um ardo processo e muitas contas!");
+        System.out.printf("\nO seu IMC deu...: ");
         if (IMC <= 18.5) {
             System.out.println("Abaixo do peso");
         } else if (IMC >= 18.6 && IMC <= 24.9) {
@@ -39,6 +49,7 @@ public class Atividades {
         } else {
             System.out.println("Valor inválido");
         }
+        System.out.println("Isso e um adeus ate a proxima!");
     }
 
     public void terceiraAtividade() {
@@ -94,25 +105,33 @@ public class Atividades {
         Scanner scanner = new Scanner(System.in);
         int numero = 0;
 
-        System.out.println("Informe um numero base:");
+        System.out.println("Bem vindo ao programa mais badalado do INTERNET!");
+        System.out.println("Conhecido como Deu 0 Ih Agora!");
+        System.out.println("Analisaremos os numeros e veremos se sobrara 0 na divisao!\n");
+        System.out.println("Comece colocando o numero base: ");
         var base = scanner.nextDouble();
 
-        do {
-            System.out.println("Informe um numero maior que a base:");
-            numero = scanner.nextInt();            
+        while (true) {
+            System.out.println("Agora um numero maior que a base: ");
+            numero = scanner.nextInt(); 
 
-            System.out.println(numero % base);
-
-            if (numero % base == 0) {
-                System.out.println("Numero divisiavel de zero!");
-                break;
+            if (numero < base) {
+                System.out.println("Vamos la. Tem que ser um numero MAIOR.");
             } else {
-                if (numero < base) {
-                    System.out.println("Numero menor que a base :(");
-                } else if (numero % base != 0) {
-                    System.out.println("Resto da divisao nao e 0 :(");
-                }
-            }
-        } while (true);
+                break;
+            }  
+        }
+        
+        System.out.printf("CERTO! Agora temos um numero base de %s\n", base);
+        System.out.printf("e o numero que sera dividido em multiplas partes %s\n", numero);
+        System.out.println("nenhum numero foi machucado no processo\n");
+   
+        if (numero % base == 0) {
+            System.out.println("O resultado da divisao foi de 0 (zero)!");
+        } else {
+            System.out.println("O resultado da divisao nao foi 0 (zero)!");
+        }
+
+        System.out.println("Parabens! E ate a proxima...");
     }
 }
